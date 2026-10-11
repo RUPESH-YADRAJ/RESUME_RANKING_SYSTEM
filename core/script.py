@@ -8,4 +8,4 @@ def extract_text_from_pdf(pdf_path):
       text += page.extract_text() + "\n"
   return text.strip()
 path = "rupesh_resum.pdf"
-extract_text_from_pdf(path)
+print(extract_text_from_pdf(path))
