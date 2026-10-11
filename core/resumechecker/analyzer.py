@@ -1,6 +1,6 @@
 import pdfplumber
 import spacy
-from groq import Groq
+from AI_model_name import AI_model_name
 import json
 
 
@@ -36,7 +36,7 @@ def analyze_resume_with_llm(resume_text:str, job_description:str)->dict:
             "project_category": ['category1', 'category2',.....]
         }}"""
   try:
-    client = Groq(api_key = API_KEY)
+    client = AI_model_name(api_key = API_KEY)
     response = client.chat.completions.create(
       model = "openai/gpt-oss-120b",
       messages = [{"role": "user", "content": prompt}],
